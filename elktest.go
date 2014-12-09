@@ -58,9 +58,9 @@ func ElkInput(elkurl, index, es_type string, obj interface{}) {
 	}
 }
 
-func ElkGet(index, es_type string, int_id int) {
+func ElkGet(elkurl, index, es_type string, int_id int) {
 	id := strconv.Itoa(int_id)
-	url := "http://g2tool.cloudapp.net:9200/" + index + "/" + es_type + "/" + id + "/"
+	url := elkurl + index + "/" + es_type + "/" + id + "/"
 	var myClient = &http.Client{
 		Transport: &http.Transport{
 			Dial: timeoutDialer(time.Duration(10)*time.Second,
@@ -77,8 +77,8 @@ func ElkGet(index, es_type string, int_id int) {
 	fmt.Printf("\n%v\n\n", string(body))
 }
 
-func ElkGetAll(index, es_type string) {
-	url := "http://g2tool.cloudapp.net:9200/" + index + "/" + es_type + "/_search?pretty"
+func ElkGetAll(elkurl, index, es_type string) {
+	url := elkurl + index + "/" + es_type + "/_search?pretty"
 	var myClient = &http.Client{
 		Transport: &http.Transport{
 			Dial: timeoutDialer(time.Duration(10)*time.Second,
