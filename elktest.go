@@ -94,30 +94,3 @@ func ElkGetAll(elkurl, index, es_type string) {
 	body, _ := ioutil.ReadAll(response.Body)
 	fmt.Printf("\n%v\n\n", string(body))
 }
-
-/*
-func main() {
-
-	type JsonType struct {
-		Status string `json:"status"`
-		//Status int 		`json:"status"`
-		ResponseTime int    `json:"responsetime"`
-		Timestamp    string `json:"@timestamp"`
-		Url          string `json:"url"`
-	}
-
-	var source JsonType
-	source.Status = "-"
-	//source.Status = 99
-	//source.ResponseTime = "902.1ms"
-	source.Timestamp = "2014/08/10 10:00:00"
-
-	//url := "http://g2tool.cloudapp.net:9200/"
-	url := "http://g2tooles2.cloudapp.net:9200/"
-	index := "jimmytest"
-	es_type := "testint_string"
-	ElkInput(url, index, es_type, source)
-	//ElkGet(index, es_type, 14)
-	//ElkGetAll(index, es_type)
-}
-*/
