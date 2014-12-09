@@ -3,16 +3,16 @@ ElkAPI
 
 ElasticSearch restful API, include ElkInput(), ElkGetAll()  <br>
 
-ELkInput(elkurl, index, table string, obj interface{})   <br>
+ELkInput(elkurl, index, es_type string, obj interface{})   <br>
        input:   <br>
        ---	elkurl string   //ElasticSearch Server Destination, ex: http://g2tooles2.cloudapp.net:9200/   <br>
        ---    index string    //ElasticSearch index    <br>
-       ---    table string    //ElasticSearch table    <br>
+       ---    es_type string    //ElasticSearch es_type    <br>
        ---    obj interface{} //Structure Object that want to put in ElasticSearch  <br>
 
 <br>
 
-ElkGetAll(index, table string)  <br>
+ElkGetAll(index, es_type string)  <br>
        input: <br>
        ---    index string    //ElasticSearch index  <br>
-       ---    table string    //ElasticSearch table  <br>
+       ---    es_type string    //ElasticSearch es_type  <br>
