@@ -1,7 +1,7 @@
 ElkAPI
 ======
 
-ElasticSearch restful api, include ElkInput(), ElkGetAll()  <br>
+ElasticSearch restful API, include ElkInput(), ElkGetAll()  <br>
 
 ELkInput(elkurl, index, table string, obj interface{})   <br>
        input:   <br>
