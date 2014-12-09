@@ -24,9 +24,9 @@ func main() {
 	url := "http://g2tool.cloudapp.net:9200/"
 	index := "test_idx"
 	es_type := "test_tbl"
-	//ElkInput(url, index, es_type, source)
+	ElkInput(url, index, es_type, source)
 
 	//ElkGet(url, index, es_type, 14)
-	ElkGetAll(url, index, es_type)
+	//ElkGetAll(url, index, es_type)
 }
 
