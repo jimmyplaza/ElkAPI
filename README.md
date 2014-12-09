@@ -10,7 +10,8 @@ ELkInput(elkurl, index, table string, obj interface{})   <br>
        ---    table string    //ElasticSearch table    <br>
        ---    obj interface{} //Structure Object that want to put in ElasticSearch  <br>
 
-
+<br>
+<br>
 
 ElkGetAll(index, table string)  <br>
        input: <br>
