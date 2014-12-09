@@ -2,9 +2,9 @@ ElkAPI
 ======
 
 ElasticSearch restful api, include ElkInput(), ElkGetAll()
-\n
+<br>
 
-ELkInput(elkurl, index, table string, obj interface{})   \n
+ELkInput(elkurl, index, table string, obj interface{})   <\br>
 input: elkurl string   //ElasticSearch Server Destination, ex: http://g2tooles2.cloudapp.net:9200/
        index string    //ElasticSearch index
        table string    //ElasticSearch table
