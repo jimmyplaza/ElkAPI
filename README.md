@@ -3,6 +3,11 @@ ElkAPI
 
 ElasticSearch restful API, include ElkInput(), ElkGetAll()  <br>
 
+*******************************************************************
+* Warning: index, type name must be lowercase letter.             *
+*          also the source json content must be lowercase letter. *
+*******************************************************************
+
 ELkInput(elkurl, index, es_type string, obj interface{})   <br>
 =======
        input:   <br>
