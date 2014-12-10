@@ -38,6 +38,7 @@ func ElkInput(elkurl, index, es_type string, obj interface{}) {
 	res, err := myClient.Post(url, "application/x-www-form-urlencoded", outReader)
 	if err != nil {
 		fmt.Printf("\nELK Error:%s\n", err)
+		res.Body.Close()
 		return
 	}
 	if res.StatusCode == 200 || res.StatusCode == 201 {
@@ -45,17 +46,20 @@ func ElkInput(elkurl, index, es_type string, obj interface{}) {
 	} else {
 		fmt.Printf("\nELK Error code: %d,url:%s\n", res.StatusCode, url)
 	}
+	res.Body.Close()
 	//err = json.Unmarshal([]byte(res.Body), &obj)
-	contents, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		fmt.Printf("Read Body Error:%s\n", err)
-		res.Body.Close()
-	}
-	var jobj interface{}
-	err = json.Unmarshal(contents, &jobj)
-	if err != nil {
-		fmt.Printf("Unmarshall JSON Error:%s => %s\n", url, err)
-	}
+	/*
+		contents, err := ioutil.ReadAll(res.Body)
+		if err != nil {
+			fmt.Printf("Read Body Error:%s\n", err)
+			res.Body.Close()
+		}
+		var jobj interface{}
+		err = json.Unmarshal(contents, &jobj)
+		if err != nil {
+			fmt.Printf("Unmarshall JSON Error:%s => %s\n", url, err)
+		}
+	*/
 }
 
 func ElkGet(elkurl, index, es_type string, int_id int) {

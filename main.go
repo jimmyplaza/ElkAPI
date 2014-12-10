@@ -15,7 +15,7 @@ type JsonType struct {
 
 func main() {
 	var source JsonType	
-	source.Status = 99
+	source.Status = 100 
 	source.ResponseTime = "902.1ms"
 	current_time := fmt.Sprintf("%s", time.Now().Format("2006-01-02 15:04"))
 	current_time = strings.Replace(current_time, " ", "T", 1)
